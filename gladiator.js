@@ -16,6 +16,9 @@ class Gladiator {
 }
 
 const maximus = new Gladiator('Maximus');
-const commodus = new Gladiator('Commodus', 'rocket launcher');
+const commodus = new Gladiator('Commodus', 'sword');
+const nick = new Gladiator('nick', 'mace');
+const tim = new Gladiator('tim', 'axe');
+const rae = new Gladiator('rae', 'sword');
 
 // TODO add wins function,
