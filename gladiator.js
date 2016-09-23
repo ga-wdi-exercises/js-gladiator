@@ -26,15 +26,20 @@ class Arena {
     fight(gladiatorOne, gladiatorTwo){
         if (gladiatorOne.weapon == "Trident" && gladiatorTwo.weapon == "Spear"){
             console.log( gladiatorOne.name + " used the " + gladiatorOne.weapon + " to win!")
+            console.log( `The lifeless corpse of ${gladiatorTwo} has been removed from the arena.`)
+            this.gladiators.splice(1,1)
         }
         else if (gladiatorOne.weapon == "Spear" && gladiatorTwo.weapon == "Club") {
             console.log( gladiatorOne.name + " used the " + gladiatorOne.weapon + " to win!")
+            this.gladiators.splice(1,1)
         } 
         else if (gladiatorOne.weapon == "Club" && gladiatorTwo.weapon == "Trident") {
             console.log( gladiatorOne.name + " used the " + gladiatorOne.weapon + " to win!")
+            this.gladiators.splice(1,1)
         }
         else {
             console.log( gladiatorTwo.name + " wins!")
+            this.gladiators.splice(0,1)
         }
     }
 }
@@ -45,8 +50,8 @@ var andronicus = new Gladiator("Andronicus","Club")
 var colosseum = new Arena("Colosseum")
 
 // Test cases
-// colosseum.addGladiator(max)
-// colosseum.addGladiator(titus)
+colosseum.addGladiator(max)
+colosseum.addGladiator(titus)
 
 // colosseum.addGladiator(titus)
 // colosseum.addGladiator(andronicus)
