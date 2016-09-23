@@ -4,24 +4,26 @@ The Emperor has commissioned you to build a Gladiator Arena.
 
 ## How to do this assignment
 
-The provided index.html file will be useful for testing out your code.
+The provided `index.html` file will be useful for testing out your code.
 
 ## Part 1 - The Gladiator
 
-Create a `gladiator` class that has the following properties:
+Create a `Gladiator` class that has the following properties:
 
 * a `name`
 * a `weapon` (one of Spear, Club, Trident)
 
 ```js
 var max = new Gladiator("Maximus","Trident")
+console.log(max.name) // "Maximus"
+console.log(max.weapon) // "Trident"
 ```
 
 ### Bonus
 
 How could you prevent creating Gladiators with a different weapon?
 
-e.g. `new Gladiator("Taco")` throws an error.
+e.g. `new Gladiator("Jesse","Taco")` throws an error.
 
 ## Part 2 - The Arena
 
@@ -70,7 +72,7 @@ colosseum.addGladiator(andronicus)
 console.log(colosseum.gladiators.length) // => 2
 ```
 
-### If there are two gladiators in the arena, you can call a fight method that results in the elimination of one of the gladiators from the arena.
+### If there are two gladiators in the arena, you can call a `fight` method that results in the elimination of one of the gladiators from the arena.
 
   * Winning conditions:
     * Trident beats Spear
