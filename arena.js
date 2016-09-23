@@ -23,7 +23,7 @@ class Arena{
     else if (gladiator1 === "club" && gladiator2 === "trident" ) {
       console.log("Gladiator 1 wins!")
     }
-    else if (gladiator1 = gladiator2) {
+    else if (gladiator1 ===gladiator2) {
       console.log("Get outta here!!!")
     }
     else {
