@@ -12,15 +12,25 @@ class Arena{
   }
 
   fight(){
-    if (this.gladiator.length < 2){
-    console.log("weapon");
-  }
-}
+    if (this.gladiator.length == 2){
+      var gladOne = this.gladiator[0].weapon;
+      var gladTwo = this.gladiator[1].weapon;
+      if ( (gladOne =="Trident" && gladTwo == "Spear") ||
+      (gladOne == "Spear" && gladTwo == "Club") ||
+      (gladOne == "Club" && gladTwo =="Trident")) {
+        alert(`${this.gladiator[0].name} wins!`);
+      } else if (gladOne == gladTwo){
+        alert("No Game This Time");
+      } else {
+        alert(`${this.gladiator[1].name} wins!`);
+      }
 
+    }
+  }
 } // closes Arena class
 
 var max = new Gladiator("Maximus","Trident")
-var titus = new Gladiator("Titus","Sword")
+var titus = new Gladiator("Titus","Trident")
 // var andronicus = new Gladiator("Andronicus","Sword")
 var colosseum = new Arena("Colosseum")
 colosseum.addGladiator(max)
