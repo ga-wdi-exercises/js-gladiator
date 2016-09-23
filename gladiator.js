@@ -17,5 +17,11 @@ class Arena {
         this.name = name.charAt(0).toUpperCase() + name.slice(1)
         this.gladiators = []
     }
-
+    addGladiator(name){
+        if (this.gladiators < 2) {
+        this.gladiators.push(name)
+        } else {
+            throw new Error("There can be only two.")
+        }
+    }
 }
