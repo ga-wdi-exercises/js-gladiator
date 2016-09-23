@@ -21,5 +21,6 @@ class Gladiator {
       this.weapon = "fists";
     }
     this.name = capitalize(name);
+    this.wins = 0;
   }
 }

@@ -6,9 +6,8 @@ class Arena {
   addGladiator(glad) {
     if (this.gladiators.length < 2) {
       this.gladiators.push(glad);
-    } else {
-      console.log("You've already got enough gladiators. Time for a fight!");
     }
+    this.fight();
   }
   capitalize(name) {
     let nameArray = name.split(' ');
@@ -24,9 +23,13 @@ class Arena {
   }
   fight() {
     let g1 = this.gladiators[0];
-    let g2 = this.gladiators[1];
-    console.log(g1, g2);
-    this.compare(g1, g2);
+    if (this.gladiators.length === 2) {
+      let g2 = this.gladiators[1];
+      console.log(`${g1.name} and ${g2.name} step into the arena...`);
+      this.compare(g1, g2);
+    } else {
+      console.log(`${g1.name} is ready for a fight.`);
+    }
   }
   compare(g1, g2) {
     var weapons = {};
@@ -42,7 +45,7 @@ class Arena {
     } else if (hasFists) {
       let fister = weapons.fists;
       delete weapons.fists;
-      // now that fists isn't in the object anymore, I can pass in the remaining gladiator using the line below. 
+      // now that fists isn't in the object anymore, I can pass in the remaining gladiator using the line below.
       this.announceWin( weapons[Object.keys(weapons)[0]], fister)
     } else if (hasSpear && hasClub) {
       this.announceWin(weapons.spear, weapons.club);
@@ -54,6 +57,8 @@ class Arena {
   }
   announceWin(winner, loser) {
     console.log(`${winner.name} WINS! ${loser.name} has left the arena in shame`);
+    this.gladiators.splice(this.gladiators.indexOf(loser), 1);
+    winner.wins++;
     return true;
   }
   bothLose() {
