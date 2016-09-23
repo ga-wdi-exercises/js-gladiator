@@ -1,6 +1,9 @@
 class Arena{
   constructor(arenaName) {
-    this.arenaName = arenaName;
+    let arenaArray = arenaName.split('');
+      arenaArray[0] = arenaArray[0].toUpperCase();
+    let aName = arenaArray.join("");
+    this.name = aName;
     this.gladiators = [];
   }
   addGladiator(name){
