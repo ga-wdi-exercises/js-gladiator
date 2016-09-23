@@ -12,10 +12,8 @@ class Arena {
   constructor(nameOfArena){
     this.gladiators=[]
 
-    this.nameOfArena = nameOfArena;
-    // capitalizeFirstLetter(string) {
-    //     return string.charAt(0).toUpperCase() + string.slice(1);
-    // }
+    this.nameOfArena = nameOfArena.charAt(0).toUpperCase() + nameOfArena.slice(1);
+
 
   }
   addGladiator(name) {
@@ -29,22 +27,39 @@ class Arena {
 
 
   }
-  fight(gladiator1, gladiator2){
+  fight(){
+    var gladiator1= this.gladiators[0]
+    var gladiator2= this.gladiators[1]
   if(gladiator1.weapon === "Club" && gladiator2.weapon === "Trident"){
+    this.gladiators.splice(1, 1)
     console.log(gladiator1.name + "Wins")
+
+    // this.gladiators.pop()
   }
   else if (gladiator2.weapon === "Club" && gladiator1.weapon === "Trident"){
-console.log(gladiator2.name + "Wins")}
+    this.gladiators.splice(0, 1)
+console.log(gladiator2.name + "Wins")
+// this.gladiators.pop()}
+}
 else if (gladiator1.weapon === "Trident" && gladiator2.weapon === "Spear"){
+  this.gladiators.splice(1,1)
   console.log(gladiator1.name + "Wins")}
 else if (gladiator2.weapon === "Trident" && gladiator1.weapon === "Spear"){
+  this.gladiators.splice(0,1)
   console.log(gladiator2.name + "Wins")
 }
 else if (gladiator1.weapon === "Spear" && gladiator2.weapon === "Club"){
+  this.gladiators.splice(1, 1)
   console.log(gladiator1.name + "Wins")
 }
 else if (gladiator1.weapon === "Club" && gladiator2.weapon === "Spear"){
+  this.gladiators.splice(0, 1)
   console.log(gladiator2.name + "Wins")
+}
+else if (gladiator1.weapon === gladiator2.weapon){
+  this.gladiators.splice(0,1)
+  this.gladiators.splice(0,1)
+  console.log(gladiator1.name + " and " + gladiator2.name + " has died.")
 }
 
       }
