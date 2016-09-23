@@ -4,7 +4,7 @@ class Gladiator {
         if (weapon == "Spear" || weapon == "Trident" || weapon == "Club") {
             this.weapon = weapon
         } else {
-            throw new Error("Invalid weapon.")
+            throw new Error("That weapon is now allowed in this arena.")
         }
         // if (["Spear", "Trident", "Club"].includes(weapon)){
         //     this.weapon = weapon
@@ -18,10 +18,15 @@ class Arena {
         this.gladiators = []
     }
     addGladiator(name){
-        if (this.gladiators < 2) {
-        this.gladiators.push(name)
+        if (this.gladiators.length < 2) {
+            this.gladiators.push(name)
         } else {
             throw new Error("There can be only two.")
         }
     }
 }
+
+var max = new Gladiator("Maximus","Trident")
+var titus = new Gladiator("Titus","Spear")
+var andronicus = new Gladiator("Andronicus","Club")
+var colosseum = new Arena("Colosseum")
