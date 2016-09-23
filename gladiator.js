@@ -2,7 +2,6 @@ class Gladiator {
   constructor (name, weapon) {
   this.name = name;
   this.isAWeapon(weapon)
-
 }
   isAWeapon (weapon) {
     if (weapon != 'Spear'|| weapon != 'Club' || weapon != 'Trident') {
@@ -14,10 +13,13 @@ class Gladiator {
   }
 
 const Max = new Gladiator ("Maximus", "Bologne")
+Max.isAWeapon ()
 
-class Arena {
-  constructor(name)
-
+class Arena extends Gladiator {
+  constructor(arenaName, name, weapon) {
+  super (name, weapon);
+  this.arenaName = arenaName;
+}
 }
 
-Max.isAWeapon ()
+const Julius = new Arena ("Julius", "Max", "Trident")
