@@ -25,7 +25,7 @@ class Arena {
     let g1 = this.gladiators[0];
     if (this.gladiators.length === 2) {
       let g2 = this.gladiators[1];
-      console.log(`${g1.name} and ${g2.name} step into the arena...`);
+      console.log(`${g1.name} (${g1.weapon}) and ${g2.name} (${g2.weapon}) step into the arena...`);
       this.compare(g1, g2);
     } else {
       console.log(`${g1.name} is ready for a fight.`);
@@ -57,7 +57,7 @@ class Arena {
   }
   announceWin(winner, loser) {
     console.log(`${winner.name} WINS! ${loser.name} has left the arena in shame`);
-    this.gladiators.splice(this.gladiators.indexOf(loser), 1);
+    this.removeGladiator(loser);
     winner.wins++;
     return true;
   }
@@ -65,6 +65,9 @@ class Arena {
     console.log(`A stalemate! Both contestants leave ${this.name} in shame`);
     this.gladiators = [];
     return false;
+  }
+  removeGladiator(gladiator) {
+    this.gladiators.splice(this.gladiators.indexOf(gladiator), 1);
   }
 }
 
