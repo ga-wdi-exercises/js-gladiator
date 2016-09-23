@@ -25,12 +25,12 @@ class Arena {
 		if (this.gladiators.length === 0) {
 			console.log(`There are no gladiators in the arena.`);
 		} else if (this.gladiators.length < 2) {
-			console.log(`There is no challenge for ${this.gladiators[0].name}`);
+			console.log(`There is no challenger for ${this.gladiators[0].name}`);
 		} else {
 			let a = this.gladiators[0].weapon;
 			let b = this.gladiators[1].weapon;
 
-			// If gladiators name is Maximus, kill the other
+			// If gladiators name is Maximus, kill the other gladiator
 			if (this.gladiators[0].name === 'Maximus') {
 				this.kill(1);
 			} else if (this.gladiators[1].name === 'Maximus') {
