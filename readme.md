@@ -1,4 +1,4 @@
-# RSpec Gladiator Arena
+# JS Gladiator Arena
 
 The Emperor has commissioned you to build a Gladiator Arena.
 
