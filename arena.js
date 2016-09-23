@@ -27,6 +27,14 @@ class Arena {
        colosseum.gladiators.shift()
        colosseum.gladiators.pop()
      }
+     else if (glad1 == "Maximus"){
+       console.log("Maximus Wins!")
+       colosseum.gladiators.pop()
+     }
+     else if (glad2wpn == "Maximus"){
+       console.log("Maximus Wins!")
+       colosseum.gladiators.shift()
+     }
      else{
        console.log(`${glad2} WINS!`);
        colosseum.gladiators.shift()

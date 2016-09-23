@@ -1,12 +1,7 @@
 class Gladiator {
   constructor (name, weapon){
     this.name = name;
-    this.weapon = if('spear' || 'trident' || 'club' == weapon.toLowerCase(){
-      return weapon
-    }
-    else{
-      alert('Not a valid weapon')
-    }
+    this.weapon = weapon
   }
 }
 
