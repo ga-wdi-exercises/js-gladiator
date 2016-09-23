@@ -15,7 +15,7 @@ class Arena{
     var gladiator1 = this.gladiators[0].weapon;
     var gladiator2 = this.gladiators[1].weapon;
     if (gladiator1 === "trident" && gladiator2 === "spear"){
-      console.log("Gladiator 1 wins!")
+      console.log("Gladiator 1 wins!");
     }
     else if (gladiator1 === "spear" && gladiator2 === "club"){
       console.log("Gladatior 1 wins!")
@@ -24,10 +24,10 @@ class Arena{
       console.log("Gladiator 1 wins!")
     }
     else if (gladiator1 = gladiator2) {
-      //pop Gladiators with for loop;
+      console.log("Get outta here!!!")
     }
     else {
-      console.log("Gladiator wins!")
+      console.log("Gladiator 2 wins!")
     }
     }
   }
