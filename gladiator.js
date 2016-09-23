@@ -121,8 +121,8 @@ class Arena  {
       let winner="";
       for (let i=0;i<winTable.length;i++) {
          if (winner=checkForWin(winTable[i],this.gladiators[0],this.gladiators[1])){
-            if (crowdChoice(winner,this.gladiators[0],this.gladiators[1])) {
-                this.removeGladiator(crowdChoice)
+            if (choice=crowdChoice(winner,this.gladiators[0],this.gladiators[1])) {
+                this.removeGladiator(choice)
             }/* crowdChoice */
 
            return; /* we found a winner */
