@@ -10,11 +10,13 @@ class Arena {
 
 }
   addGladiators(name){
-    if (addGladiators = 2){
+    if (addGladiators === 2){
      return `let the fight begin `
 }
 else `error`
 }
+
+
 
 // let max = new Gladiator("Maximus","Trident")
 // // let titus = new Gladiator("Titus","Sword")
