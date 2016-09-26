@@ -16,7 +16,7 @@ class Gladiator {
     }
   }
 }
-let max = new Gladiator("Maximus","Taco")
+let max = new Gladiator("Maximus","Trident")
 
 let titus = new Gladiator("Titus","Sword")
 
