@@ -3,7 +3,7 @@ class Arena {
     this.name = name.toLowerCase().replace(/\b[a-z]/g, function(letter){
     return letter.toUpperCase();
     })
-    this.gladiators = [gladiators]
+    this.gladiators = []
   }
   addGladiators(fighter){
     this.gladiators.unshift(fighter)
