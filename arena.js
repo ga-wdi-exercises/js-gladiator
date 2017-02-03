@@ -9,12 +9,11 @@ class Arena {
       this.gladiators.push(gladiator);
     }
   }//end add gladiators
-
   fight(){
     let weaponOne = this.gladiators[0].weapon.toUpperCase();
     let weaponTwo = this.gladiators[1].weapon.toUpperCase();
     let gladiatorOne = this.gladiators[0].name;
-    let gladiatorTwo = this.gladiator[1].name;
+    let gladiatorTwo = this.gladiators[1].name;
     if(weaponOne == 'TRIDENT' && weaponTwo == 'SPEAR'){
       console.log(`${gladiatorOne} Wins!`);
     }else if(weaponOne == 'SPEAR' && weaponTwo == 'CLUB'){
@@ -32,10 +31,8 @@ class Arena {
 
 var max = new Gladiator("Maximus","Trident")
 var titus = new Gladiator("Titus","Spear")
-var andronicus = new Gladiator("Andronicus","Club")
 var colosseum = new Arena("Colosseum")
 colosseum.addGladiator(max)
 colosseum.addGladiator(titus)
-colosseum.addGladiator(andronicus)
-console.log(colosseum.gladiators);
-console.log(colosseum.gladiators.length) // => 2
+colosseum.fight()
+console.log(colosseum.gladiators) // => [max]
