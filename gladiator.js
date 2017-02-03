@@ -11,4 +11,6 @@ class Gladiator {
 }
 
 
-let eva = new Gladiator ('eva', 'Spear')
+let eva = new Gladiator ('Eva', 'Trident')
+let erica = new Gladiator('Erica','Spear')
+let eric = new Gladiator('Eric','Club')
