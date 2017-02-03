@@ -9,11 +9,24 @@ class Arena {
       this.gladiators.push(gladiator);
     }
   }//end add gladiators
-  // fight(this.gladiators[0]){
-  //   if(this.gladiators[0].weapon.toUpperCase() == 'TRIDENT'){
-  //     console.log("fight");
-  //   }
-  // }
+
+  fight(){
+    let weaponOne = this.gladiators[0].weapon.toUpperCase();
+    let weaponTwo = this.gladiators[1].weapon.toUpperCase();
+    let gladiatorOne = this.gladiators[0].name;
+    let gladiatorTwo = this.gladiator[1].name;
+    if(weaponOne == 'TRIDENT' && weaponTwo == 'SPEAR'){
+      console.log(`${gladiatorOne} Wins!`);
+    }else if(weaponOne == 'SPEAR' && weaponTwo == 'CLUB'){
+            console.log(`${gladiatorOne } Wins!`);
+    }else if(weaponeOne == 'CLUB' && weaponTwo == 'TRIDENT'){
+          console.log(`${gladiatorOne } Wins!`);
+    }else if(weaponeOne == weaponTwo){
+      console.log(`${gladiatorOne} AND ${gladiatorTwo} Both Died`);
+    }else{
+      console.log(`${gladiatorTwo } Wins!`);
+    }
+  }//end fight
 
 }//end class Arena
 

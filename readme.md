@@ -69,7 +69,6 @@ var colosseum = new Arena("Colosseum")
 colosseum.addGladiator(max)
 colosseum.addGladiator(titus)
 colosseum.addGladiator(andronicus)
-console.log(colosseum.gladiators.length) // => 2
 ```
 
 ### If there are two gladiators in the arena, you can call a `fight` method that results in the elimination of one of the gladiators from the arena.
