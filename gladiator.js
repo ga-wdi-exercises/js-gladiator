@@ -4,5 +4,11 @@ class Gladiator {
     this.name = name
     this.weapon = weapon
     }
+    else{
+      throw new Error(['Not a wise weapon of choice. Choose one from the list.'])
+    }
   }
 }
+
+
+let eva = new Gladiator ('eva', 'Spear')
