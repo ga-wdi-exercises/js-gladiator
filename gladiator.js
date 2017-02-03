@@ -12,3 +12,4 @@ class Gladiator {
 
 let fighter1 = new Gladiator("Eric", "Trident")
 let fighter2 = new Gladiator("Mark", "Spear")
+let fighter3 = new Gladiator("Bob", "Club")

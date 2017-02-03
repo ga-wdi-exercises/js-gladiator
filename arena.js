@@ -8,8 +8,7 @@ class Arena {
   addGladiators(fighter){
     this.gladiators.unshift(fighter)
     this.gladiators.slice(2,1)
-
   }
 }
 
-let colo = new Arena("san diego", [fighter1, fighter2])
+let colo = new Arena("san diego", [])
