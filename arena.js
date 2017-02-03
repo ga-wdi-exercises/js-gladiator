@@ -3,11 +3,10 @@
 
 
 class Arena{
-  constructor(name){
-    this.name = name
-    this.colosseum = colosseum
-    return name.charAt(0).toUpperCase() + name.slice(1);
-  }
+  constructor(name, gladiators){
+    this.name = name.toLowerCase().replace(/\b[a-z]/g, function(letter){
+    return letter.toUpperCase();
+  })
 }
 var colosseum = new Arena("megalopolis")
 var colosseum = new Arena("colosseum")
