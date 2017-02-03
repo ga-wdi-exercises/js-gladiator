@@ -1,9 +1,8 @@
-const weaponOptions = ['Spear', 'Club', 'Trident'];
-
 class Gladiator {
   constructor(name, weapon){
     this._name = name;
-    if( weapon && weaponOptions.indexOf(weapon) !== - 1 ){
+    this._weaponOptions = ['Spear', 'Club', 'Trident'];
+    if( weapon && this._weaponOptions.indexOf(weapon) !== - 1 ){
       this._weapon = weapon;
       console.log(`${this._name} is equipped with a ${this._weapon}`);
     } else {

@@ -84,7 +84,6 @@ class Arena {
     let nombre = name.toLowerCase().charAt(0).toUpperCase() + name.slice(1).toLowerCase();
     let gladiator = this._gladiators.find(gladiator => gladiator._name === nombre);
     this._gladiators.splice(this._gladiators.indexOf(gladiator), 1);
-    console.log(`${gladiator._name} has left the arena.`);
   }
 
   entertained() {
