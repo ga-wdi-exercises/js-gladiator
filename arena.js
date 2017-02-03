@@ -20,7 +20,18 @@ class Arena {
       } else if (gladiator1 === "Club" && gladiator2 === "Trident") {
         this.gladiators.splice(1)
         console.log("Club wins!")
+      } else if (gladiator1 === "Spear" && gladiator2 === "Trident") {
+        this.gladiators.splice(0)
+        console.log("Trident wins!")
+      } else if (gladiator1 === "Club" && gladiator2 === "Spear") {
+        this.gladiators.splice(0)
+        console.log("Spear wins!")
+      } else if (gladiator1 === "Trident" && gladiator2 === "Club") {
+        this.gladiators.splice(0)
+        console.log("Club wins!")
       } else {
+        this.gladiators.splice(0)
+        this.gladiators.splice(1)
         console.log("Gladiators killed each other!")
       }
     }
