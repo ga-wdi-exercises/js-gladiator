@@ -4,24 +4,23 @@ class Arena {
     this.gladiators = []
   }
   addGladiator(gladiators) {
+    if (this.gladiators.length <= 1) {
     this.gladiators.push(gladiators)
-    if (this.gladiators.length > 1) {
-      this.gladiators.pop()
     }
   }
   fight() {
-    var weapons = ["Trident", "Spear", "Club"]
-    var wins = {}
-    weapons.forEach(function(weapon, i) {
-    wins[weapon] = {}
-    wins[weapon][weapon] = "Gladiators kill each other."
-    wins[weapon][weapons[(i+1)%3]] = weapons[(i+3)%3] + " wins."
-    wins[weapon][weapons[(i+2)%3]] = weapons + " wins."
-  })
-  function compare(weapon1, weapon2) {
-    return (wins[weapon1] || {}[weapon2] || "Invalid choice")
-  }
-}
+    var gladiator1 = this.gladiators[0].weapon
+    var gladiator2 = this.gladiators[1].weapon
+      if (gladiator1 === "Trident" && gladiator2 === "Spear") {
+        console.log("Trident wins!")
+      } else if (gladiator1 === "Spear" && gladiator2 === "Club") {
+        console.log("Spear wins!")
+      } else if (gladiator1 === "Club" && gladiator2 === "Trident") {
+        console.log("Club wins!")
+      } else {
+        console.log("Gladiators killed each other!")
+      }
+    }
 }
 var max = new Gladiator("Maximus","Trident")
 var titus = new Gladiator("Titus","Spear")
