@@ -5,9 +5,15 @@ class Arena {
   }//end constructor
 
   addGladiator(gladiator){
+    if(this.gladiators.length < 2){
       this.gladiators.push(gladiator);
+    }
   }//end add gladiators
-
+  // fight(this.gladiators[0]){
+  //   if(this.gladiators[0].weapon.toUpperCase() == 'TRIDENT'){
+  //     console.log("fight");
+  //   }
+  // }
 
 }//end class Arena
 
