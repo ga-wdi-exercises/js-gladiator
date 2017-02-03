@@ -7,4 +7,3 @@ class Gladiator {
 
 }
 var max = new Gladiator('Sam', 'spear')
-console.log(max)
