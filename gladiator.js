@@ -12,4 +12,4 @@ class Gladiator {
 
 
 let shortnd = new Gladiator("Shortnd", "Trident");
-let taco = new Gladiator("Eric", "Club");
+let taco = new Gladiator("Eric", "Trident");
