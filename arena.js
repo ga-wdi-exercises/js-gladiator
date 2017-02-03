@@ -7,7 +7,31 @@ class Arena {
   }
   addGladiators(fighter){
     this.gladiators.unshift(fighter)
-    this.gladiators.slice(2,1)
+    this.gladiators.splice(2,1)
+  }
+  fight(){
+    if(colo.gladiators.length === 2){
+    if(fighter1.weapon === "Trident"){
+      if(fighter2.weapon === "Spear"){
+        return "Trident Wins"
+      }else{
+        if(fighter2.weapon === "Club"){
+          return "Club Wins"
+        }
+      }
+    }if (fighter1.weapon === "Club"){
+      if(fighter2.weapon === "Spear"){
+        return "Spear Wins"
+      }else{
+        if(fighter2.weapon === "Trident"){
+          return "Club Wins"
+        }
+      }
+    }else{
+      return "Both fighters lost"
+    }
+
+    }
   }
 }
 
