@@ -4,5 +4,7 @@ class Gladiator {
     this.weapon = weapon;
   }
 }
-let Max = new Gladiator('Maximus','Trident');
-console.log(Max);
+let max = new Gladiator('Maximus','Trident');
+let titus = new Gladiator('Titus','Spear');
+let marcos = new Gladiator('Marcus','Club');
+let andronicus = new Gladiator('Andronicus','Sword');
