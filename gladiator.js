@@ -9,8 +9,7 @@ class Gladiator {
         }
       }
     }
-
-let fighter1 = new Gladiator("Linda", "Trident")
-let fighter2 = new Gladiator("Gene", "Spear")
-let fighter3 = new Gladiator("Bob", "Club")
-let fighter4 = new Gladiator("Tina", "Spear")
+    let f1 = new Gladiator("Linda", "Trident")
+    let f2 = new Gladiator("Gene", "Spear")
+    let f3 = new Gladiator("Bob", "Club")
+    let f4 = new Gladiator("Tina", "Spear")

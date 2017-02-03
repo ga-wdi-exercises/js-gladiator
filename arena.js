@@ -5,12 +5,14 @@ class Arena {
     })
     this.gladiators = []
   }
-  addGladiators(fighter){
+  addGladiators(){
     this.gladiators.unshift(fighter)
     this.gladiators.splice(2,1)
   }
   fight(){
     if(colo.gladiators.length === 2){
+      let fighter1 = this.gladiators[0]
+      let fighter2 = this.gladiators[1]
     if(fighter1.weapon === "Trident"){
       if(fighter2.weapon === "Spear"){
         return "Trident Wins"
