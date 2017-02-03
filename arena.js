@@ -35,4 +35,11 @@ class Arena {
       }
     }
   }
+  removeByName(gladiatorName) {
+    for (let i = 0; i < this.gladiators.length; i++) {
+      if (this.gladiators[i].name === gladiatorName) {
+        this.gladiators.splice(i, 1);
+      }
+    }
+  }
 }
