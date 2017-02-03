@@ -20,12 +20,25 @@ class Arena{
     }
 
     fight(){
-      if(this.gladiators[0])
-    }
 
+      if(this.gladiators[0].weapon == "Trident" && this.gladiators[1].weapon == "Spear"){
+        this.gladiators.pop()
+        }
+      if(this.gladiators[0].weapon == "Spear" && this.gladiators[1].weapon == "Club"){
+          this.gladiators.pop()
+        }
+      if(this.gladiators[0].weapon == "Club" && this.gladiators[1].weapon == "Trident"){
+            this.gladiators.pop()
+        }
+      if(this.gladiators[0].weapon == this.gladiators[1].weapon){
+              this.gladiators = []
+        }
+      }
 }
 
 let colo = new Arena("colosseum")
 
 colo.addGladiator(max)
+colo.addGladiator(maz)
+colo.fight()
 console.log(colo.gladiators);

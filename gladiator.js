@@ -13,5 +13,6 @@ class Gladiator {
 }
 
 var max = new Gladiator("Maximus","Trident")
+var maz = new Gladiator("Mazimus","Trident")
 var titus = new Gladiator("Titus","Spear")
 var andronicus = new Gladiator("Andronicus","Club")
