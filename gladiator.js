@@ -13,3 +13,4 @@ class Gladiator {
 let erica = new Gladiator("Erica","Trident")
 let eva = new Gladiator("Eva","Spear")
 let colin = new Gladiator("Colin","Club")
+let maximus = new Gladiator("Maximus","Spear")
