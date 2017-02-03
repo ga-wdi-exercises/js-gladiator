@@ -1,13 +1,15 @@
 class Gladiator {
-	constructor(name, weapon){
-		this.name = name
-		this.weapon = weapon
+    constructor(name, weapon) {
+        this.name = name
+        this.weapon = weapon
 
-	}
+    }
 
 }
-var max = new Gladiator('Sam', 'spear')
-
+// trident > spear
+// spear > club
+//club > trident
+// if have same weapons both die
 class Arena {
     constructor(name, gladiators = []) {
         this.name = (name.charAt(0).toUpperCase() + name.slice(1))
@@ -15,20 +17,29 @@ class Arena {
 
     }
     addGladiator(name) {
-            if (this.gladiators.length < 2) {
-                this.gladiators.push(name)
-            } else {
-                alert("to many dudes in this piece")
-            }
+        if (this.gladiators.length < 2) {
+            this.gladiators.push(name)
+        } else {
+            alert("to many dudes in this piece")
         }
-        // fight(){
-        // 	this.gladiators[]
+    }
+    fight() {
+    	if (this.gladiators.length = 2){
+    		let fighterOneWeapon = this.gladiators[0].weapon
+    		let fighterTwoWeapon = this.gladiators[1].weapon
+    		console.log(fighterOneWeapon)
+    	}
+
+    }
+    	
 }
+var max = new Gladiator('Sam', 'spear')
+var george = new Gladiator('george','trident')
 var bigOne = new Arena("theatreofentertainment")
 console.log(bigOne)
 bigOne.addGladiator(max)
-console.log(bigOne)
-// String.prototype.capitalize = function() {
-//     return this.
-// }
-// console.log("hello world".capitalize())
+bigOne.addGladiator(george)
+console.log(bigOne.gladiators[0].weapon)
+bigOne.fight()
+
+    
