@@ -9,6 +9,9 @@ class Arena {
       this.gladiators.push(gladiator)
     }
   }
+  // removeGladiator(gladiator){
+  //
+  // }
   fight(){
     if (this.gladiators.length == 2) {
       let firstGladiator = this.gladiators[0].name
@@ -20,20 +23,26 @@ class Arena {
       } else if (firstWeapon == "Trident") {
         if (secondWeapon == "Spear") {
           console.log(`${firstGladiator} wins!`)
+          this.gladiators.pop()
         } else {
           console.log(`${secondGladiator} wins!`)
+          this.gladiators.shift()
         }
       } else if (firstWeapon == "Spear") {
         if (secondWeapon == "Club") {
           console.log(`${firstGladiator} wins!`)
+          this.gladiators.pop()
         } else {
           console.log(`${secondGladiator} wins!`)
+          this.gladiators.shift()
         }
       } else if (firstWeapon == "Club") {
         if (secondWeapon == "Trident") {
           console.log(`${firstGladiator} wins!`)
+          this.gladiators.pop()
         } else {
           console.log(`${secondGladiator} wins!`)
+          this.gladiators.shift()
         }
       }
     }
