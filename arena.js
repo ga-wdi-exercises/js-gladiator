@@ -12,8 +12,8 @@ class Arena {
     if (this.gladiators.length === 2) {
       let a = this.gladiators[0];
       let b = this.gladiators[1];
-      let aWins = () => this.gladiators.splice(1);
-      let bWins = () => this.gladiators.splice(0, 1);
+      let aWins = () => this.gladiators.pop();
+      let bWins = () => this.gladiators.shift();
       if (a.name === 'Maximus') {
         aWins();
       } else if (b.name === 'Maximus') {
