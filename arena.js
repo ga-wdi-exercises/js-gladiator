@@ -12,29 +12,31 @@ class Arena {
     if (this.gladiators.length === 2) {
       let a = this.gladiators[0];
       let b = this.gladiators[1];
+      let aWins = () => this.gladiators.splice(1);
+      let bWins = () => this.gladiators.splice(0, 1);
       if (a.name === 'Maximus') {
-        this.gladiators.splice(1, 1);
+        aWins();
       } else if (b.name === 'Maximus') {
-        this.gladiators.splice(0, 1);
+        bWins();
       } else if (a.weapon === b.weapon) {
         this.gladiators = [];
       } else if (a.weapon === 'trident') {
         if (b.weapon === 'spear') {
-          this.gladiators.splice(1, 1);
+          aWins();
         } else {
-          this.gladiators.splice(0, 1);
+          bWins();
         }
       } else if (a.weapon === 'spear') {
         if (b.weapon === 'club') {
-          this.gladiators.splice(1, 1);
+          aWins();
         } else {
-          this.gladiators.splice(0, 1);
+          bWins();
         }
       } else {
         if (b.weapon === 'trident') {
-          this.gladiators.splice(1, 1);
+          aWins();
         } else {
-          this.gladiators.splice(0, 1);
+          bWins();
         }
       }
     }
