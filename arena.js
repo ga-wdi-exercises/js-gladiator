@@ -46,4 +46,13 @@ class Arena {
       }
     }
   }
+  isEntertained() {
+    if (this.gladiators[0].name === 'Maximus') {
+      return true;
+    } else if (this.gladiators[1] === 'Maximus') {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
