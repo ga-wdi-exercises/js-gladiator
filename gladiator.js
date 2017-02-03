@@ -32,7 +32,7 @@ class Arena {
   fight(){
     var weaponArray = [this.gladiators[0].weapon,this.gladiators[1].weapon];
     weaponArray.sort();
-    var weaponToRemove;
+    var weaponToKeep;
     if (this.gladiators.length == 2) {
       if(weaponArray[0] == weaponArray[1]) {
           this.gladiators = [];
@@ -40,21 +40,19 @@ class Arena {
       else
       {
         if (weaponArray[0] == "spear") {
-        weaponToRemove = weaponArray[0];
+        weaponToKeep= weaponArray[1];
         }
         if(weaponArray[0] == "club" && weaponArray[1] == "trident") {
-        weaponToRemove = weaponArray[1];
+        weaponToKeep = weaponArray[0];
         }
         else{
-        weaponToRemove = weaponArray[0];
+        weaponToKeep = weaponArray[1];
         }
-          if (this.gladiators[0].weapon==weaponToRemove){
-          this.gladiators.shift();
-          }
-          else{
-          this.gladiators.pop();
-          }
-      }
+        this.gladiators = this.gladiators.filter(function(obj){
+        return obj.weapon == weaponToKeep;
+      })
+      console.log(this.gladiators)
       }
   }
   }
+}
