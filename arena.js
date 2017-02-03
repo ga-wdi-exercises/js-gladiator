@@ -39,6 +39,10 @@ class Arena {
       }
     }
   }
+  remove(gladiator) {
+    this.gladiators.find(gladiator)
+      
+  }
 }
 var pokedome = new Arena('pokedome')
 console.log(pokedome.name)
