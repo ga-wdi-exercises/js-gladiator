@@ -11,10 +11,10 @@ class Arena {
   fight() {
     var a = this.gladiators[0].weapon
     var b = this.gladiators[1].weapon
-    if (a == 'maximus'){
+    if (a == 'Maximus'){
       this.gladiators.splice(1,1)
     }
-    else if (b == 'maximus'){
+    else if (b == 'Maximus'){
       this.gladiators.splice(0,1)
     }
     else if ((((a=='spear')&&(b=='club'))||((a=='club')&&(b=='trident')))||((a=='trident')&&(b=='spear'))) {
@@ -35,5 +35,5 @@ class Arena {
       }
     })
   }
-  
+
 }
