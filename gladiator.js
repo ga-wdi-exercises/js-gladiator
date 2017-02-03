@@ -3,7 +3,7 @@ class Gladiator {
     this.name = name;
     this.weapon = weapon;
   }
-  
+
 }
 
-let max = new Gladiator("Maximus", "Trident")
+var max = new Gladiator("Maximus", "Trident")
