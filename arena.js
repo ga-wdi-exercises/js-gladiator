@@ -1,6 +1,6 @@
 class Arena {
   constructor(name, Gladiators){
-    this.name = name;
+    this.capitalize(name);
     this.gladiators = [ ];
   }
   addGladiator(newGladiator){
@@ -30,12 +30,10 @@ class Arena {
       this.gladiators.shift();
     }
   }
+  capitalize(name) {
+    this.name = name[0].toUpperCase() + name.slice(1);
+  }
 }
 
 let colosseum = new Arena('colosseum');
 let megalopolis = new Arena("Megalopolis")
-
-
-// Object.freeze(Arena);
-//The name of the Arena should be capitalized
-//bug: You can change gladiators by colosseum.gladiators = ['alpha', 'beta'];
