@@ -35,23 +35,16 @@ class Arena {
     var weaponToKeep;
     if (this.gladiators.length == 2) {
       if(weaponArray[0] == weaponArray[1]) {
-          this.gladiators = [];
-      }
+          this.gladiators = [];}
       else
-      {
-        if (weaponArray[0] == "spear") {
-        weaponToKeep= weaponArray[1];
-        }
+      { if (weaponArray[0] == "spear") {
+        weaponToKeep= weaponArray[1];}
         if(weaponArray[0] == "club" && weaponArray[1] == "trident") {
-        weaponToKeep = weaponArray[0];
-        }
+        weaponToKeep = weaponArray[0];}
         else{
-        weaponToKeep = weaponArray[1];
-        }
+        weaponToKeep = weaponArray[1];}
         this.gladiators = this.gladiators.filter(function(obj){
-        return obj.weapon == weaponToKeep;
-      })
-      console.log(this.gladiators)
+        return obj.weapon == weaponToKeep;})
       }
   }
   }
