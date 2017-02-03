@@ -4,7 +4,12 @@ class Arena {
     this.gladiators = [];
   }
   addGladiator(name){
-    this.gladiators.push(name)
+    if (this.gladiatos.length < 2){
+      this.gladiators.push(name)
+    } else {
+      console.log("Arena is full");
+    }
+
   }
 }
 
