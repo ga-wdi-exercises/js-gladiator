@@ -5,10 +5,11 @@ class Gladiator {
       this.weapon = weapon
     }
     else {
-      throw new Error("Must choose a valid weapon.");
+      throw new Error("Must choose a valid weapon.")
     }
   }
 }
 
-let erica = new Gladiator("Erica","Trident");
-let eva = new Gladiator("Eva","Banana");
+let erica = new Gladiator("Erica","Trident")
+let eva = new Gladiator("Eva","Spear")
+let colin = new Gladiator("Colin","Club")
