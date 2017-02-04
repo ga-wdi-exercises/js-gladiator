@@ -1,16 +1,9 @@
 class Arena {
-   constructor(name,gladiators){
+   constructor(name){
      this.name =  name.charAt(0).toUpperCase() + name.slice(1);
-     this.gladiator = []
+     this.gladiators = []
    }
-   class Gladiator {
-       constructor (name, weapon ){
-       this.name = name;
-       this.weapon = weapon;
-     }
-
-   }
- addGladiator(name){
+ addGladiators(name){
    if (this.gladiators.length < 2){
      this.gladiators.push(name);
    }else{
@@ -19,32 +12,40 @@ class Arena {
  }
  fight(){
    if(this.gladiators.length == 2){
-     let fightOne = this.gladiators[0].weapon
-     let fightTwo = this.gladiators[1].weapon
-         if ( fightone == Trident){
-           this.gladiators.pull(name);
-         }
-   } else{
-     this.gladiators.pull(name);
+     let fighterOne = this.gladiators[0].weapon
+     let fighterTwo = this.gladiators[1].weapon
+     if ( fighterOne == "Trident" && fighterTwo == "Spear"){
+       this.gladiators.pop();
+     } else if ( fighterOne == "Spear" && fighterTwo == "Sword"){
+       this.gladiators.pop();
 
-   }
+     } else if (fighterOne == "Sword" && fighterTwo == "Trident"){
+       this.gladiators.pop();
+     }else if( fighterOne == "Spear" && fighterTwo == "Trident" ){
+       this.gladiators.pop();
+     }else if( fighterOne == "Sword" && fighterTwo == "Spear"){
+       this.gladiators.pop();
+     }else if (fighterOne == "Sword" && fighterTwo == "Trident"){
+       this.gladiators.pop();
+     }
+     else{
+       console.log("No one dies on my watch");
+     }
  }
 
 
 }
-var max = new Gladiator("Maximus","Trident")
-var titus = new Gladiator("Titus","Spear")
 
- var colosseum = new Arena("colosseum")
+}
+var colosseum = new Arena('Colosseum');
  console.log(colosseum.name);
- console.log(colosseum.Gladiator);
 
+ //first trying with just two fighters and checking if we don't get an alert
+colosseum.addGladiators(max);
+colosseum.addGladiators(titus);
 
- var colosseum = new Arena("megalopolis");
+//Adding the third fighter to see for an alert
 
+colosseum.addGladiators(andronicus);
 
-
-
-colosseum.addGladiator(max)
-console.log(colosseum.gladiators)
-var max = new Gladiator("Maximus","Trident")
+ console.log(colosseum.gladiators);
