@@ -5,6 +5,8 @@ class Arena {
 		this.gladiators = [];
 	}
 	addGladiator(newGladiator){
-		this.gladiators.push(newGladiator);
+		if (this.gladiators.length < 2){
+			this.gladiators.push(newGladiator);
+		}
 	}
 }
