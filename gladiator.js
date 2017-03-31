@@ -1,6 +1,6 @@
 class Gladiator {
-  constructor(name , weapon) {
-    this.name = name;
+  constructor(gladName , weapon) {
+    this.gladName = gladName;
 
     if (weapon === "Spear" || "Club" || "Trident") {
       this.weapon = weapon;
