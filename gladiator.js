@@ -4,6 +4,10 @@ class Gladiator {
     this.weapon = weapon;
   }
 }
-let max = new Gladiator ("Maximus", "Trident")
-console.log(max.name)
-console.log(max.weapon)
+
+let max = new Gladiator ("Maximus", "Trident");
+let titus = new Gladiator ("Titus", "Spear");
+let andronicus = new Gladiator ("Andronicus", "Sword");
+
+console.log(max.name);
+console.log(max.weapon);
