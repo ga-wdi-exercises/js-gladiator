@@ -7,14 +7,11 @@ class Gladiator {
         this.weapon = weapon;
       }
     }
-     else {
-        new Error('Not a Valid Weapon!')
+      if(!(this.weapon)) {
+        console.log(new Error('not a valid weapon!'))
       }
   }
 }
-
-var Al = new Gladiator('Al', 'trident');
-var James = new Gladiator('James', 'trident');
 
 class Arena {
   constructor(name) {
@@ -57,7 +54,3 @@ class Arena {
       }
     }
 }
-
-var hell = new Arena('hell');
-
-var hell = new Arena('hell');
