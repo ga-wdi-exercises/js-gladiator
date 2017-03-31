@@ -10,8 +10,8 @@ The provided `index.html` file will be useful for testing out your code.
 
 Create a `Gladiator` class that has the following properties:
 
-* a `name`
-* a `weapon` (one of Spear, Club, Trident)
+* a `name` DONE
+* a `weapon` (one of Spear, Club, Trident) DONE
 
 ```js
 var max = new Gladiator("Maximus","Trident")
@@ -21,7 +21,7 @@ console.log(max.weapon) // "Trident"
 
 ### Bonus
 
-How could you prevent creating Gladiators with a different weapon?
+How could you prevent creating Gladiators with a different weapon? COME BACK TO THIS
 
 e.g. `new Gladiator("Jesse","Taco")` throws an error.
 
@@ -29,13 +29,13 @@ e.g. `new Gladiator("Jesse","Taco")` throws an error.
 
 Create an `Arena` class that meets the following conditions:
 
-### An arena has a name
+### An arena has a name DONE
 
 ```js
-var colosseum = new Arena("Colosseum")
+var colosseum = new Arena("Colosseum") DONE
 console.log(colosseum.name) // => Colosseum
 ```
-### The name should be capitalized
+### The name should be capitalized DONE - but make first letter capital
 
 ```js
 var colosseum = new Arena("megalopolis")
