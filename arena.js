@@ -10,8 +10,40 @@ class Arena {
     }
   }
   fight() {
-    if (this.gladiators[0].weapon === 'Trident') {
+    if (this.gladiators[0].name === "Maximus") {
+      this.gladiators.splice(1, 1);
+    } else if (this.gladiators[1].name === "Maximus") {
+      this.gladiators.splice(0, 1);
+    } else {
+      // No gladiator named "Maximus"
+      if (this.gladiators[0].weapon === 'Trident') {
+        if (this.gladiators[1].weapon === 'Club') {
+          this.gladiators.splice(0, 1);
+        } else if (this.gladiators[1].weapon === 'Spear') {
+          this.gladiators.splice(1, 1);
+        } else {
+          this.gladiators.splice(0, 2);
+        }
+      } else if (this.gladiators[0].weapon === 'Spear') {
+        if (this.gladiators[1].weapon === 'Trident') {
+          this.gladiators.splice(0, 1);
+        } else if (this.gladiators[1].weapon === 'Club') {
+          this.gladiators.splice(1, 1);
+        } else {
+          this.gladiators.splice(0, 2);
+        }
+      } else if (this.gladiators[0].weapon === 'Club') {
+        if (this.gladiators[1].weapon === 'Spear') {
+          this.gladiators.splice(0, 1);
+        } else if (this.gladiators[1].weapon === 'Trident') {
+          this.gladiators.splice(1, 1);
+        } else {
+          this.gladiators.splice(0, 2);
+        }
+      }
+    }
 
+    if (this.gladiators[0].weapon === 'Trident') {
       if (this.gladiators[1].weapon === 'Club') {
         this.gladiators.splice(0, 1);
       } else if (this.gladiators[1].weapon === 'Spear') {
@@ -19,9 +51,7 @@ class Arena {
       } else {
         this.gladiators.splice(0, 2);
       }
-
     } else if (this.gladiators[0].weapon === 'Spear') {
-
       if (this.gladiators[1].weapon === 'Trident') {
         this.gladiators.splice(0, 1);
       } else if (this.gladiators[1].weapon === 'Club') {
@@ -29,9 +59,7 @@ class Arena {
       } else {
         this.gladiators.splice(0, 2);
       }
-
     } else if (this.gladiators[0].weapon === 'Club') {
-
       if (this.gladiators[1].weapon === 'Spear') {
         this.gladiators.splice(0, 1);
       } else if (this.gladiators[1].weapon === 'Trident') {
@@ -39,7 +67,6 @@ class Arena {
       } else {
         this.gladiators.splice(0, 2);
       }
-
     }
   }
   removeGladiator(name) {
