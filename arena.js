@@ -2,73 +2,55 @@ class Arena {
   constructor(name) {
     this.name = name.charAt(0).toUpperCase() + name.slice(1);
     this.gladiators = [];
+    this.weapons = ['Trident', 'Spear', 'Club'];
   }
   addGladiator(name) {
     this.gladiators.unshift(name);
     if (this.gladiators.length > 2) {
-      return this.gladiators.slice(0,2);
+      return this.gladiators = this.gladiators.slice(0,2);
     }
   }
+  weaponTest(glad1, glad2) {
+
+  }
   fight() {
-    if (this.gladiators[0].name === "Maximus") {
+    let gladiator0 = this.gladiators[0];
+    let gladiator1 = this.gladiators[1];
+
+    if (gladiator0.name === "Maximus") {
       this.gladiators.splice(1, 1);
-    } else if (this.gladiators[1].name === "Maximus") {
+    } else if (gladiator1.name === "Maximus") {
       this.gladiators.splice(0, 1);
     } else {
       // No gladiator named "Maximus"
-      if (this.gladiators[0].weapon === 'Trident') {
-        if (this.gladiators[1].weapon === 'Club') {
+      if (gladiator0.weapon === 'Trident') {
+        if (gladiator1.weapon === 'Club') {
           this.gladiators.splice(0, 1);
-        } else if (this.gladiators[1].weapon === 'Spear') {
+        } else if (gladiator1.weapon === 'Spear') {
           this.gladiators.splice(1, 1);
         } else {
           this.gladiators.splice(0, 2);
         }
-      } else if (this.gladiators[0].weapon === 'Spear') {
-        if (this.gladiators[1].weapon === 'Trident') {
+      } else if (gladiator0.weapon === 'Spear') {
+        if (gladiator1.weapon === 'Trident') {
           this.gladiators.splice(0, 1);
-        } else if (this.gladiators[1].weapon === 'Club') {
+        } else if (gladiator1.weapon === 'Club') {
           this.gladiators.splice(1, 1);
         } else {
           this.gladiators.splice(0, 2);
         }
-      } else if (this.gladiators[0].weapon === 'Club') {
-        if (this.gladiators[1].weapon === 'Spear') {
+      } else if (gladiator0.weapon === 'Club') {
+        if (gladiator1.weapon === 'Spear') {
           this.gladiators.splice(0, 1);
-        } else if (this.gladiators[1].weapon === 'Trident') {
+        } else if (gladiator1.weapon === 'Trident') {
           this.gladiators.splice(1, 1);
         } else {
           this.gladiators.splice(0, 2);
         }
-      }
-    }
-
-    if (this.gladiators[0].weapon === 'Trident') {
-      if (this.gladiators[1].weapon === 'Club') {
-        this.gladiators.splice(0, 1);
-      } else if (this.gladiators[1].weapon === 'Spear') {
-        this.gladiators.splice(1, 1);
-      } else {
-        this.gladiators.splice(0, 2);
-      }
-    } else if (this.gladiators[0].weapon === 'Spear') {
-      if (this.gladiators[1].weapon === 'Trident') {
-        this.gladiators.splice(0, 1);
-      } else if (this.gladiators[1].weapon === 'Club') {
-        this.gladiators.splice(1, 1);
-      } else {
-        this.gladiators.splice(0, 2);
-      }
-    } else if (this.gladiators[0].weapon === 'Club') {
-      if (this.gladiators[1].weapon === 'Spear') {
-        this.gladiators.splice(0, 1);
-      } else if (this.gladiators[1].weapon === 'Trident') {
-        this.gladiators.splice(1, 1);
-      } else {
-        this.gladiators.splice(0, 2);
       }
     }
   }
+
   removeGladiator(name) {
     this.gladiators.forEach((gladiator, i) => {
       if(gladiator.name === name) {
@@ -76,4 +58,12 @@ class Arena {
       }
     })
   }
+  entertained() {
+    this.gladiators.forEach((item) => {
+      if (item.name === "Maximus") {
+        console.log("Crowd is entertained!");
+      }
+    })
+  }
+
 }
