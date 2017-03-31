@@ -16,6 +16,8 @@ class Arena {
 
 			if (colosseum.gladiators[0].weapon == "Trident" && colosseum.gladiators[1].weapon == "Spear" ){
 				alert ("trident beats spear so first guy wins");
+				colosseum.gladiators.pop[1];
+				console.log(colosseum.gladiators[0].name);
 			} else if (colosseum.gladiators[0].weapon == "Trident" && colosseum.gladiators[1].weapon == "Club" ){
 				alert ("club beats trident so second guy wins");
 
