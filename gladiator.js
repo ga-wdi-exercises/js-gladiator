@@ -7,4 +7,4 @@ class Gladiator {
 
 var max = new Gladiator("Maximus","Trident");
 var titus = new Gladiator("Titus","Sword");
-var andronicus = new Gladiator("Andronicus","Sword")
+var andronicus = new Gladiator("Andronicus","Club");
