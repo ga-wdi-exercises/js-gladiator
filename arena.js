@@ -1,20 +1,33 @@
+class Gladiator {
+  constructor (name, weapon){
+    this.name = name;
+    this.weapon = weapon;
+  }
+}
+
+let max = new Gladiator ("Maximus", "Trident");
+let titus = new Gladiator ("Titus", "Spear");
+
+console.log(max.name);
+console.log(max.weapon);
+
 class Arena {
   constructor (name) {
     this.name = name.charAt(0).toUpperCase() + name.slice(1);
-    this.gladiators = []
+    this.gladiators = [];
   }
   addGladiator (name) {
     if (this.gladiators.length < 2) {
-      this.gladiators.push(name)
+      this.gladiators.push(name);
     }
   }
   removeGladiator (name) {
-    this.gladiators.remove(name)
+    this.gladiators.remove(name);
   }
   fight() {
     if (this.gladiators.length === 2) {
-      let first = this.gladiators[0].weapon
-      let second = this.gladiators[1].weapon
+      let first = this.gladiators[0].weapon;
+      let second = this.gladiators[1].weapon;
       if (first == second) {
         this.gladiators.pop();
         console.log("both are eliminated");
@@ -37,15 +50,15 @@ class Arena {
   }
 }
 
-var max = new Gladiator("Maximus","Trident")
-var titus = new Gladiator("Titus","Spear")
-var colosseum = new Arena("Colosseum")
+let andronicus = new Gladiator ("Andronicus", "Sword");
+let colosseum = new Arena("Colosseum");
 console.log(colosseum.name);
-colosseum.addGladiator(max)
-colosseum.addGladiator(titus)
+
+colosseum.addGladiator(max);
+colosseum.addGladiator(titus);
 colosseum.addGladiator(andronicus);
-colosseum.fight()
-console.log(colosseum.gladiators)
+colosseum.fight();
+console.log(colosseum.gladiators);
 
 
 // Winning conditions:
