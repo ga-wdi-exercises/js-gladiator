@@ -6,7 +6,6 @@ class Gladiator {
 }
 
 
-
 class Arena {
   constructor(arena) {
     this.arena = arena;
@@ -19,35 +18,44 @@ class Arena {
   }
 
   fight() {
-
-  for (var i = 0, i <= this.gladiators.length; i++) {
-    if (this.gladiators[i].weapon === "Trident") {
-      var trident = this.gladiators[i];
-    } if (this.gladiators[i].weapon === "Spear") {
-      var spear = this.gladiators[i];
-    } if (this.gladiators[i].weapon === "Sword") {
-      var sword = this.gladiators[i];
+    for (var i = 0; i <= this.gladiators.length; i++) {
+      if (this.gladiators[i].weapon === "Trident") {
+        var trident = this.gladiators[i];
+      } else if (this.gladiators[i].weapon === "Club") {
+        var club = this.gladiators[i];
+      } else if (this.gladiators[i].weapon === "Spear") {
+        var spear = this.gladiators[i];
+      }
+      if (trident && spear) {
+        alert(`${trident.name}(Trident) VS ${spear.name}(Spear)`);
+        this.gladiators.pop(spear);
+        alert(`Winner is ${this.gladiators[0].name}`);
+        console.log(colosseum.gladiators);
+      } else if (spear && club) {
+        alert(`${spear.name}(Spear) VS ${club.name}(Club)`);
+        this.gladiators.pop(club);
+        alert(`Winner is ${this.gladiators[0].name}`);
+        console.log(colosseum.gladiators);
+      } else if (club && trident) {
+        alert(`${club.name}(Club) VS ${trident.name}(Trident)`);
+        this.gladiators.pop(trident);
+        alert(`Winner is ${this.gladiators[0].name}`);
+        console.log(colosseum.gladiators);
+      } else if (this.gladiators[0].weapon === this.gladiators[1].weapon) {
+        alert(`${this.gladiators[0].name}(${this.gladiators[0].weapon}) VS ${this.gladiators[1].name}(${this.gladiators[1].weapon})`);
+        alert(`both ${this.gladiators[0].name} & ${this.gladiators[1].name} were eliminated `)
+        this.gladiators = [];
+        console.log(colosseum.gladiators);
+      }
     }
   }
-  var trident = this.gladiators.weapon === "Trident";
-  var spear = this.gladiators.weapon === "Spear";
-  var sword = this.gladiators.weapon === "Sword";
-
-
-
-
-
-
 
 }
 
 
 var max = new Gladiator("Maximus","Trident")
 var titus = new Gladiator("Titus","Spear")
-var andronicus = new Gladiator("Andronicus","Sword")
+var andronicus = new Gladiator("Andronicus","Club")
 var colosseum = new Arena("colosseum");
 colosseum.addGladiator(max)
 colosseum.addGladiator(titus)
-
-console.log(colosseum.gladiators)
-console.log(colosseum.gladiators.length)
