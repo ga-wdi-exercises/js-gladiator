@@ -1,33 +1,30 @@
 # JS Gladiator Arena
 
-The Emperor has commissioned you to build a Gladiator Arena.
+The Emperor has commissioned you to build a Gladiator Arena. You will do so using your knowledge of object-oriented Javascript and ES6 classes.
 
-## How to do this assignment
+All of your Javascript code will be written in `gladiator.js` and `arena.js`. You can test your code by opening `index.html` in the browser and interacting with the console.
 
-The provided `index.html` file will be useful for testing out your code.
+## Part 1: The Gladiator
 
-## Part 1 - The Gladiator
+Create a `Gladiator` class that has the following properties...
+- a `name`
+- a `weapon` (one of Spear, Club, Trident)
 
-Create a `Gladiator` class that has the following properties:
-
-* a `name`
-* a `weapon` (one of Spear, Club, Trident)
+Once defined, you should be able to do the following...
 
 ```js
-var max = new Gladiator("Maximus","Trident")
+var max = new Gladiator("Maximus", "Trident")
 console.log(max.name) // "Maximus"
 console.log(max.weapon) // "Trident"
 ```
 
 ### Bonus
 
-How could you prevent creating Gladiators with a different weapon?
+Make it so that you cannot assign a Gladiator an invalid weapon (i.e., anything aside from Spear, Club or Trident. That means running code like `new Gladiator("Jesse", "Taco")` would throw an error
 
-e.g. `new Gladiator("Jesse","Taco")` throws an error.
+## Part 2: The Arena
 
-## Part 2 - The Arena
-
-Create an `Arena` class that meets the following conditions:
+Create an `Arena` class that meets the following criteria...
 
 ### An arena has a name
 
@@ -51,7 +48,6 @@ console.log(colosseum.gladiators) // => []
 
 ### You can add a gladiator to the arena
 
-
 ```js
 var max = new Gladiator("Maximus","Trident")
 var colosseum = new Arena("Colosseum")
@@ -74,11 +70,11 @@ console.log(colosseum.gladiators.length) // => 2
 
 ### If there are two gladiators in the arena, you can call a `fight` method that results in the elimination of one of the gladiators from the arena.
 
-  * Winning conditions:
-    * Trident beats Spear
-    * Spear beats Club
-    * Club beats Trident
-    * If the two gladiators have the same weapon, they are both eliminated.
+Winning conditions
+- Trident beats Spear
+- Spear beats Club
+- Club beats Trident
+- If the two gladiators have the same weapon, they are both eliminated.
 
 ```js
 var max = new Gladiator("Maximus","Trident")
@@ -90,7 +86,7 @@ colosseum.fight()
 console.log(colosseum.gladiators) // => [max]
 ```
 
-## Double Bonus!
+### Bonus
 
 * Add a method to remove gladiators from the arena by name
 * Update your winning conditions so that if the gladiator named "Maximus" is in the fight, he wins.
