@@ -10,7 +10,10 @@ class Arena {
       }
     }
   fight(){
-    if (this.gladiators[0].weapon == "Trident" && this.gladiators[1].weapon == "Spear") {
+    if (this.gladiators.name == "Maximus") {
+      let loser = this.gladiators.name != "Maximus"
+      loser.pop()
+    } else if (this.gladiators[0].weapon == "Trident" && this.gladiators[1].weapon == "Spear") {
       this.gladiators.pop()
     } else if (this.gladiators[0].weapon == "Spear" && this.gladiators[1].weapon == "Sword") {
       this.gladiators.pop()
@@ -21,5 +24,7 @@ class Arena {
       this.gladiators.shift()
     }
   }
-
+  removeGladiator(gladiators){
+    this.gladiators.shift(gladiators)
+  }
 }
