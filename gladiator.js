@@ -8,3 +8,4 @@ class Gladiator{
 var max = new Gladiator("Maximus", "Trident")
 console.log(max.name)
 console.log(max.weapon)
+var titus = new Gladiator("Titus", "Sword")
