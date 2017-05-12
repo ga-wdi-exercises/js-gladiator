@@ -5,18 +5,20 @@ class Arena{
 		this.cap(name)
 		this.gladiators = []
 	}
+	//Capitalize the arena name
 	cap(name){
 			let firstL = name.charAt(0).toUpperCase()
 			let rest = name.slice(1)
 			this.name = firstL + rest
 		}
-
+	// Hard fighter limit at 2
 	addGladiator(fighter){
 		this.gladiators.push(fighter)
 		if (this.gladiators.length > 2) {
 			this.gladiators.shift()
 		}
 	}
+	// Rock Paper Scissors fight
 	fight(){
 		let fighter1 = this.gladiators[0]
 		let fighter2 = this.gladiators[1]
