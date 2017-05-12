@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="jsgladiatorarena">JS Gladiator Arena</h1>
+
+<p>The Emperor has commissioned you to build a Gladiator Arena. You will do so using your knowledge of object-oriented Javascript and ES6 classes.</p>
+
+<p>All of your Javascript code will be written in <code>gladiator.js</code> and <code>arena.js</code>. You can test your code by opening <code>index.html</code> in the browser and interacting with the console.</p>
+
+<h2 id="part1:thegladiator">Part 1: The Gladiator</h2>
+
+<p>Create a <code>Gladiator</code> class that has the following properties&#8230;
+- a <code>name</code>
+- a <code>weapon</code> (one of Spear, Club, Trident)</p>
+
+<p>Once defined, you should be able to do the following&#8230;</p>
+
+<pre><code class="js">var max = new Gladiator(&quot;Maximus&quot;, &quot;Trident&quot;)
+console.log(max.name) // &quot;Maximus&quot;
+console.log(max.weapon) // &quot;Trident&quot;
+</code></pre>
+
+<h3 id="bonus">Bonus</h3>
+
+<p>Make it so that you cannot assign a Gladiator an invalid weapon (i.e., anything aside from Spear, Club or Trident. That means running code like <code>new Gladiator(&quot;Jesse&quot;, &quot;Taco&quot;)</code> would throw an error</p>
+
+<h2 id="part2:thearena">Part 2: The Arena</h2>
+
+<p>Create an <code>Arena</code> class that meets the following criteria&#8230;</p>
+
+<h3 id="anarenahasaname">An arena has a name</h3>
+
+<pre><code class="js">var colosseum = new Arena(&quot;Colosseum&quot;)
+console.log(colosseum.name) // =&gt; Colosseum
+</code></pre>
+
+<h3 id="thenameshouldbecapitalized">The name should be capitalized</h3>
+
+<pre><code class="js">var colosseum = new Arena(&quot;megalopolis&quot;)
+console.log(colosseum.name) // =&gt; Megalopolis
+</code></pre>
+
+<h3 id="anarenacanhavegladiators">An arena can have gladiators</h3>
+
+<pre><code class="js">var colosseum = new Arena(&quot;Colosseum&quot;)
+console.log(colosseum.gladiators) // =&gt; []
+</code></pre>
+
+<h3 id="youcanaddagladiatortothearena">You can add a gladiator to the arena</h3>
+
+<pre><code class="js">var max = new Gladiator(&quot;Maximus&quot;,&quot;Trident&quot;)
+var colosseum = new Arena(&quot;Colosseum&quot;)
+colosseum.addGladiator(max)
+console.log(colosseum.gladiators) // =&gt; [Gladiator]
+</code></pre>
+
+<h3 id="thearenashouldneverhavemorethan2gladiatorsinitatatime">The arena should never have more than 2 gladiators in it at a time</h3>
+
+<pre><code class="js">var max = new Gladiator(&quot;Maximus&quot;,&quot;Trident&quot;)
+var titus = new Gladiator(&quot;Titus&quot;,&quot;Sword&quot;)
+var andronicus = new Gladiator(&quot;Andronicus&quot;,&quot;Sword&quot;)
+var colosseum = new Arena(&quot;Colosseum&quot;)
+colosseum.addGladiator(max)
+colosseum.addGladiator(titus)
+colosseum.addGladiator(andronicus)
+console.log(colosseum.gladiators.length) // =&gt; 2
+</code></pre>
+
+<h3 id="iftherearetwogladiatorsinthearenayoucancallafightmethodthatresultsintheeliminationofoneofthegladiatorsfromthearena.">If there are two gladiators in the arena, you can call a <code>fight</code> method that results in the elimination of one of the gladiators from the arena.</h3>
+
+<p>Winning conditions
+- Trident beats Spear
+- Spear beats Club
+- Club beats Trident
+- If the two gladiators have the same weapon, they are both eliminated.</p>
+
+<pre><code class="js">var max = new Gladiator(&quot;Maximus&quot;,&quot;Trident&quot;)
+var titus = new Gladiator(&quot;Titus&quot;,&quot;Spear&quot;)
+var colosseum = new Arena(&quot;Colosseum&quot;)
+colosseum.addGladiator(max)
+colosseum.addGladiator(titus)
+colosseum.fight()
+console.log(colosseum.gladiators) // =&gt; [max]
+</code></pre>
+
+<h3 id="bonus">Bonus</h3>
+
+<ul>
+<li>Add a method to remove gladiators from the arena by name</li>
+<li>Update your winning conditions so that if the gladiator named &#8220;Maximus&#8221; is in the fight, he wins.</li>
+<li>Add a method to check to see if the crowd is entertained (<code>.entertained?</code>). The crowd is only entertained if Maximus is in the arena.</li>
+<li>Before a losing gladiator is eliminated, the user should be prompted to put their thumbs up or down. If user votes down, the losing gladiator is removed. If the user votes up, the gladiator stays in the arena and his opponent is removed. (Life isn&#8217;t fair.)</li>
+</ul>
+
+</body>
+</html>

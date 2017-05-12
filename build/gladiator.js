@@ -1,0 +1,1 @@
+"use strict";function _classCallCheck(a,n){if(!(a instanceof n))throw new TypeError("Cannot call a class as a function")}var Gladiator=function a(n){var s=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"Spear";_classCallCheck(this,a),this.name=n,this.weapon=s};

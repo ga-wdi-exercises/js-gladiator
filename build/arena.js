@@ -1,0 +1,1 @@
+"use strict";function _classCallCheck(a,n){if(!(a instanceof n))throw new TypeError("Cannot call a class as a function")}var Arena=function a(){var n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:Error;_classCallCheck(this,a),this.name=n};
