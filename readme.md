@@ -60,7 +60,7 @@ console.log(colosseum.gladiators) // => [Gladiator]
 ```js
 var max = new Gladiator("Maximus","Trident")
 var titus = new Gladiator("Titus","Sword")
-var andronicus = new Gladiator("Andronicus","Sword")
+var andronicus = new Gladiator("Andronicus","Scimitar")
 var colosseum = new Arena("Colosseum")
 colosseum.addGladiator(max)
 colosseum.addGladiator(titus)
