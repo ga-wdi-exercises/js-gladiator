@@ -64,10 +64,8 @@ class Arena{
 					this.gladiators.shift()
 					console.log(`${this.gladiators[0].name} has won!`)
 				}
-			} /*else{
-				return "error"
-			}*/
-
+			}
+			
 		}else{
 			console.log(`${this.gladiators[0].name} needs an opponet!`)
 		}

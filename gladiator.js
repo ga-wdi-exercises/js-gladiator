@@ -8,7 +8,6 @@ class Gladiator {
 		const possibleWeapons = ["Spear","Club","Trident"]
 		if (possibleWeapons.includes(weapon)) {
 			this.weapon = weapon
-			return
 		}else{
 			this.weapon = "Club"
 			alert("Error! not a valid weapon \n you've been given a Club")
