@@ -18,40 +18,41 @@ class Arena{
 		}
 	}
 	fight(){
-
 		let fighter1 = this.gladiators[0]
 		let fighter2 = this.gladiators[1]
+		console.log(this.gladiators)
 
-	if (this.gladiators.length === 2) {
-		if (fighter1.weapon === fighter2.weapon) {
-			console.log("Both fighters were eliminated...")
-		}else if (fighter1.weapon === "Spear") {
+		if (this.gladiators.length === 2) {
+			if (fighter1.weapon === fighter2.weapon) {
+				console.log("Both fighters were eliminated...")
+				this.gladiators = []
+			}else if (fighter1.weapon === "Spear") {
 
-			if (fighter2.weapon === "Club") {
-				this.gladiators.pop()
-			}else {
-				this.gladiators.shift()
-			}
-		}else if (fighter1.weapon === "Club") {
-			if (fighter2.weapon === "Trident") {
-				this.gladiators.pop()
-			}else{
-				this.gladiators.shift()
-			}
+				if (fighter2.weapon === "Club") {
+					this.gladiators.pop()
+				}else {
+					this.gladiators.shift()
+				}
+			}else if (fighter1.weapon === "Club") {
+				if (fighter2.weapon === "Trident") {
+					this.gladiators.pop()
+				}else{
+					this.gladiators.shift()
+				}
 
-		}else if (this.fighter1.weapon === "Trident") {
-			if (this.fighter2.weapon === "Spear") {
-				this.gladiators.pop()
-			}else{
-				this.gladiators.shift()
-			}
+			}else if (fighter1.weapon === "Trident") {
+				if (fighter2.weapon === "Spear") {
+					this.gladiators.pop()
+				}else{
+					this.gladiators.shift()
+				}
+			} /*else{
+				return "error"
+			}*/
+
 		}else{
-			return "error"
+			console.log(`${this.gladiators[0]} needs an opponet!`)
 		}
-
-	}else{
-		console.log(`${this.gladiators[0]} needs an opponet!`)
-	}
 	}
 }
 
