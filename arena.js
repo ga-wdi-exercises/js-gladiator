@@ -5,13 +5,12 @@ class Arena {
     console.log(" Welcome to "+name+"!!!")
   }
   addGladiator(name){
-      this.name=name;
-      this.gladiators.push(this.name);
-      console.log(this.name+" added!!!")
+      this.gladiators.push(name);
+      console.log(this.gladiators+" added!!!")
       console.log(this.gladiators.length);
 
     if (this.gladiators.length==2){
-      return ("You already have two players");
+      return "You already have two players";
     }
   }
 
