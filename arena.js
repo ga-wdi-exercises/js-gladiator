@@ -10,10 +10,40 @@ class Arena {
       console.log(colosseum.gladiators);
     }
   }
-  fight (this.gladiators.length = 2){
-    this.gladiators.pop();
+  addName (name){
+      this.name.push(name);
+      if (this.name.length > 2){
+        this.name.pop();
   }
 }
+  fight() {
+    if (this.gladiators[0].weapon === this.gladiators[1].weapon) {
+      this.gladiators.pop();
+      this.gladiators.pop();
+    } else if(this.gladiators[0].weapon > this.gladiators[1].weapon) {
+      this.gladiators.pop();
+    } else {
+      this.gladiators.shift();
+    }
+}
+fightByName () {
+  if (this.name[0].weapon === this.name[1].weapon) {
+    this.name.pop();
+    this.name.pop();
+  } else if(this.name[0].weapon > this.name[1].weapon) {
+    this.name.pop();
+  } else {
+    this.name.shift();
+  }
+  if(this.name[0].weapon > this.name[1].weapon){
+    prompt("Hurray!");
+  } else {
+    prompt("Boo!")
+  }
+}
+}
+
+
 
 var colosseum = new Arena("Colosseum")
 console.log(colosseum.name)
