@@ -1,7 +1,7 @@
 class Gladiator {
     constructor(name='New Character', weapon='Spear'){
-        this.name = name;
-        this.weapon = weapon;
+        this.name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+        this.weapon = weapon.charAt(0).toUpperCase() + weapon.slice(1).toLowerCase();
 
         switch (this.weapon) {
             case "Spear":
@@ -11,7 +11,7 @@ class Gladiator {
             case "Trident":
                 break;
             default:
-                throw Error
+                throw Error;
                 break;
         }
     }
