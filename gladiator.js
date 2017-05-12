@@ -11,7 +11,7 @@ class Gladiator {
             case "Trident":
                 break;
             default:
-                throw Error;
+                throw "Choose a weapon between a Spear, Club, or Trident";
                 break;
         }
     }
