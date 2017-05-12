@@ -4,12 +4,11 @@ class Arena{
     this.gladiators = []
   }
   addGladiator(gladiators){
-    this.gladiators.push(max);
-    this.gladiators.push(titus);
-    console.log(this.gladiators);
-
-
+    this.gladiators.push(gladiator);
+  
  }
+
+
 
 }
 var colosseum = new Arena("Colosseum")
