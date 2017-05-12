@@ -1,28 +1,30 @@
 class Arena{
   constructor(name){
-    this.name = name.charAt(0).toUpperCase() + name.slice(1);
-    this.gladiators = [];
+      this.name = name.charAt(0).toUpperCase() + name.slice(1);
+      this.gladiators = [];
   }
   addFighter(gladiator){
-    this.gladiators.push(gladiator)
-    if((colosseum.gladiators).length > 2){  //set a max of 2 fighters
-      this.gladiators.pop();
+      this.gladiators.push(gladiator)
+      if((colosseum.gladiators).length > 2){  //set a max of 2 fighters
+        this.gladiators.pop();
   }
+}
 
   fight() {
-      if(this.gladiator[0].weapon === "Trident" && this.gladiator(1) === "Spear")
-      this.gladiators.pop(1);
-      }else if ((this.gladiator[0].weapon === "Spear" && this.gladiator(1) === "Club")
-        this.gladiators.pop(1);
-      }else if ((this.gladiator[0].weapon === "Club" && this.gladiator(1) === "Trident")
-        this.gladiators.pop(1);
+      if(this.gladiators[0].weapon == "Trident" && this.gladiators[1] == "Spear") {
+        this.gladiators.pop();
+      }else if (this.gladiators[0].weapon == "Spear" && this.gladiators[1] == "Club") {
+        this.gladiators.pop();
+      }else if (this.gladiators[0].weapon == "Club" && this.gladiators[1] == "Trident") {
+        this.gladiators.pop();
       }else{
-        this.gladiator.pop;
-        this.gladiator.shift;
-      }
-    }
+        this.gladiators.pop;
+        this.gladiators.shift;
 
-const colosseum = new Arena("colosseum");
-const max = new Gladiator("Maximus", "Trident")
-const titus = new Gladiator("Titus", "Sword")
-const andronicus = new Gladiator("Andronicus", "Spear")
+    }
+}
+
+var colosseum = new Arena("colosseum")
+var max = new Gladiator("Maximus", "Trident")
+var titus = new Gladiator("Titus", "Sword")
+var andronicus = new Gladiator("Andronicus", "Spear")
