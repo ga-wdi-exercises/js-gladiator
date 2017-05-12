@@ -24,6 +24,7 @@ class Arena{
 		let fighter2 = this.gladiators[1]
 
 		if (this.gladiators.length === 2) {
+			//Maximus Always Wins
 			if (this.gladiators[0].name==="Maximus"||this.gladiators[1].name==="Maximus") {
 
 				console.log(`Maximus has won!`)
@@ -32,8 +33,7 @@ class Arena{
 				}else{
 					this.gladiators.shift()
 				}
-				return
-
+			// Equal weapoons cancle out
 			}else if (fighter1.weapon === fighter2.weapon) {
 				console.log("Both fighters were eliminated...")
 				this.gladiators = []
@@ -69,7 +69,7 @@ class Arena{
 			}*/
 
 		}else{
-			console.log(`${this.gladiators[0]} needs an opponet!`)
+			console.log(`${this.gladiators[0].name} needs an opponet!`)
 		}
 	}
 }
