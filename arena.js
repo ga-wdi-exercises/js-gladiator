@@ -34,10 +34,41 @@ class Arena {
   }
 
   thumbUpOrDown(){
-    var thumb = prompt("Thumbs up or down? Should the loser die? u/d")
-    if (thumb == "u" || thumb == "d") {
-      this.thumbDirection = thumb
+    while (this.thumbDirection !== 'u' && this.thumbDirection !== 'd') {
+      this.thumbDirection = prompt("Thumbs up or down? Should the loser die? u/d")
+      console.log(this.thumbDirection)
     }
+  }
+
+  killGladiator0(){
+    console.log(this.gladiators[0].name + " has been defeated")
+    this.thumbUpOrDown()
+    if (this.thumbDirection == "d") {
+      console.log(this.gladiators[1].name + " has killed " + this.gladiators[0].name)
+      this.gladiators.shift()
+    }else{
+      console.log(this.gladiators[0].name + " has killed " + this.gladiators[1].name)
+      this.gladiators.pop()
+    }
+
+  }
+
+  killGladiator1(){
+    console.log(this.gladiators[1].name + " has been defeated")
+    this.thumbUpOrDown()
+    if (this.thumbDirection == "d") {
+      console.log(this.gladiators[0].name + " has killed " + this.gladiators[1].name)
+      this.gladiators.shift()
+    }else{
+      console.log(this.gladiators[1].name + " has killed " + this.gladiators[0].name)
+      this.gladiators.pop()
+    }
+
+  }
+  killBothGladiators(){
+    console.log("Both gladiators have been elminated")
+    self.gladiators.shift()
+    self.gladiators.pop()
   }
 
   fight(){
@@ -66,43 +97,34 @@ class Arena {
         switch (weap2){
 
           case "Trident":
-            console.log("Both gladiators have been elminated")
-            self.gladiators.shift()
-            self.gladiators.pop()
+            this.killBothGladiators()
           break;
 
           case "Spear":
-            console.log(`${self.gladiators[1].name} has been eliminated`)
-            self.gladiators.pop()
+            this.killGladiator1()
           break;
 
           case "Club":
-            console.log(`${self.gladiators[0].name} has been eliminated`)
-            self.gladiators.shift()
+            this.killGladiator0()
           break;
         }
 
         break;
 
 
-
       case "Spear":
         switch (weap2){
 
           case "Trident":
-            console.log(`${self.gladiators[1].name} has been eliminated`)
-            self.gladiators.pop()
+            this.killGladiator1()
           break;
 
           case "Spear":
-            console.log("Both gladiators have been elminated")
-            self.gladiators.shift()
-            self.gladiators.pop()
+            this.killBothGladiators()
           break;
 
           case "Club":
-            console.log(`${self.gladiators[0].name} has been eliminated`)
-            self.gladiators.shift()
+            this.killGladiator0()
           break;
 
         }
@@ -110,23 +132,18 @@ class Arena {
       break;
 
 
-
       case "Club":
         switch (weap2){
           case "Trident":
-            console.log(`${self.gladiators[1].name} has been eliminated`)
-            self.gladiators.pop()
+            this.killGladiator1()
           break;
 
           case "Spear":
-            console.log(`${self.gladiators[0].name} has been eliminated`)
-            self.gladiators.shift()
+            this.killGladiator0()
           break;
 
           case "Club":
-            console.log("Both gladiators have been elminated")
-            self.gladiators.shift()
-            self.gladiators.pop()
+            this.killBothGladiators()
           break;
       }
 
@@ -140,7 +157,7 @@ class Arena {
 }
 
 
-var max = new Gladiator("Maximus","spear")
+var max = new Gladiator("max","spear")
 var titus = new Gladiator("Titus","trident")
 var colosseum = new Arena("Colosseum")
 colosseum.addGladiator(max)
