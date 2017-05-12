@@ -20,9 +20,9 @@ class Arena{
       }else{
         this.gladiators.pop;
         this.gladiators.shift;
-
+      }
     }
-}
+  }
 
 var colosseum = new Arena("colosseum")
 var max = new Gladiator("Maximus", "Trident")
