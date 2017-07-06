@@ -1,26 +1,28 @@
-class Arena extends Gladiator {
-    constructor (namep , gladiatorName, gladiatorWeapon) {
-      super(gladiatorName, gladiatorWeapon);
-
-      this.name = namep.charAt(0).toUppperCase() + namep.slice(1);
-      this.gladiators = [];
-      this.entertain = false;
-    }
+class Arena
+{
+    constructor (namep)
+          {
 
 
+            this.name = `${namep.charAt(0).toUpperCase()}${namep.slice(1)}`;
+            this.gladiators = [];
+            this.entertain = false;
+          }
 
-    addGladiator (gladiator)
-    {
-      if(this.gladiators.length<=2)
-      {
-        this.gladiators.push(gladiator);
-      }
-      else
-      {
-      console.log("You can only have 2 gladiators, no more than that");
-      }
 
-    }
+
+        addGladiator (gladiator)
+        {
+          if(this.gladiators.length<2)
+          {
+            this.gladiators.push(gladiator);
+          }
+          else
+          {
+          console.log("You can only have 2 gladiators, no more than that");
+          }
+
+        }
 
     fight ()
     {
@@ -38,46 +40,46 @@ class Arena extends Gladiator {
           else
           {
 
-                      if(this.gladiators[0].weapon ==="Trident" && this.gladiator[1].weapon ==="Spear")
+                      if(this.gladiators[0].weapon ==="Trident" && this.gladiators[1].weapon ==="Spear")
                       {
-                        removeGladiator(this.gladiator[1].name);
+                        this.removeGladiator(this.gladiators[1].name);
                       }
-                      else if(this.gladiator[1].weapon ==="Trident" && this.gladiators[0].weapon ==="Spear")
+                      else if(this.gladiators[1].weapon ==="Trident" && this.gladiators[0].weapon ==="Spear")
                       {
-                        removeGladiator(this.gladiator[0].name);
-                      }
-
-                      else if(this.gladiators[0].weapon ==="Spear" && this.gladiator[1].weapon ==="Club")
-                      {
-                        removeGladiator(this.gladiator[1].name);
-                      }
-                      else if(this.gladiator[1].weapon ==="Spear" && this.gladiators[0].weapon ==="Club")
-                      {
-                        removeGladiator(this.gladiator[0].name);
+                        this.removeGladiator(this.gladiators[0].name);
                       }
 
-                      else if(this.gladiators[0].weapon ==="Club" && this.gladiator[1].weapon ==="Trident")
+                      else if(this.gladiators[0].weapon ==="Spear" && this.gladiators[1].weapon ==="Club")
                       {
-                        removeGladiator(this.gladiator[1].name);
+                        this.removeGladiator(this.gladiators[1].name);
                       }
-                      else if(this.gladiator[1].weapon ==="Club" && this.gladiators[0].weapon ==="Trident")
+                      else if(this.gladiators[1].weapon ==="Spear" && this.gladiators[0].weapon ==="Club")
                       {
-                        removeGladiator(this.gladiator[0].name);
+                        rthis.emoveGladiator(this.gladiators[0].name);
                       }
-                      else if(this.gladiators[0].weapon ==="Trident" && this.gladiator[1].weapon ==="Trident")
+
+                      else if(this.gladiators[0].weapon ==="Club" && this.gladiators[1].weapon ==="Trident")
                       {
-                        removeGladiator(this.gladiator[1].name);
-                        removeGladiator(this.gladiator[0].name);
+                        this.removeGladiator(this.gladiators[1].name);
                       }
-                      else if(this.gladiator[1].weapon ==="Spear" && this.gladiators[0].weapon ==="Spear")
+                      else if(this.gladiators[1].weapon ==="Club" && this.gladiators[0].weapon ==="Trident")
                       {
-                        removeGladiator(this.gladiator[1].name);
-                        removeGladiator(this.gladiator[0].name);
+                        this.removeGladiator(this.gladiators[0].name);
                       }
-                      else if(this.gladiator[1].weapon ==="Club" && this.gladiators[0].weapon ==="Club")
+                      else if(this.gladiators[0].weapon ==="Trident" && this.gladiators[1].weapon ==="Trident")
                       {
-                        removeGladiator(this.gladiator[1].name);
-                        removeGladiator(this.gladiator[0].name);
+                        this.removeGladiator(this.gladiators[1].name);
+                        this.removeGladiator(this.gladiators[0].name);
+                      }
+                      else if(this.gladiators[1].weapon ==="Spear" && this.gladiators[0].weapon ==="Spear")
+                      {
+                        this.removeGladiator(this.gladiators[1].name);
+                        this.removeGladiator(this.gladiators[0].name);
+                      }
+                      else if(this.gladiators[1].weapon ==="Club" && this.gladiators[0].weapon ==="Club")
+                      {
+                        this.removeGladiator(this.gladiators[1].name);
+                        this.removeGladiator(this.gladiators[0].name);
                       }
                       else
                       {
@@ -96,11 +98,11 @@ class Arena extends Gladiator {
     }//end of fight
 
 
-    removeGladiator(name)
+    removeGladiator (name)
     {
 
 
-      var x = (`The user ${names} is about to be removed, enter "up" to keep him or "down" to remove him`);
+      var x = prompt(`The user ${name} is about to be removed, enter "up" to keep him or "down" to remove him`);
           if ( x==='up')
           {
 
@@ -117,11 +119,19 @@ class Arena extends Gladiator {
           }
           else if (x==='down')
           {
-            removeGladiator(namex);
+                if(this.gladiators[0].name===name)
+                {
+                  this.gladiators.shift();
+                }
+                else
+                {
+                this.gladiators.pop();
+
+                }
           }
           else
           {
-            console.log("you have typed an invalid vote, ")
+                console.log("you have typed an invalid vote, ")
           }
 
 
@@ -131,9 +141,9 @@ class Arena extends Gladiator {
 
 
 
-      this.gladiators = this.gladiators.filter((gladiator) => {
-        return gladiator.name !== name
-      })
+      // this.gladiators = this.gladiators.filter((gladiator) => {
+      //   return gladiator.name !== name
+      //})
       // if(this.gladiators.length===0)
       // {
       //     console.log("There is nothing to remove");
@@ -166,3 +176,35 @@ class Arena extends Gladiator {
 
 
 }//end of class Arena
+
+
+
+//
+// var colosseum = new Arena("Colosseum")
+// console.log(colosseum.name) // => Colosseum
+//
+// var colosseum = new Arena("megalopolis")
+// console.log(colosseum.name) // => Megalopolis
+//
+// var colosseum = new Arena("Colosseum")
+// console.log(colosseum.gladiators) // => []
+
+
+// var max = new Gladiator("Maximus","Trident")
+// var titus = new Gladiator("Titus","Sword")
+// var andronicus = new Gladiator("Andronicus","Sword")
+// var colosseum = new Arena("Colosseum")
+// colosseum.addGladiator(max)
+// colosseum.addGladiator(titus)
+// colosseum.addGladiator(andronicus)
+// console.log(colosseum.gladiators.length) // => 2
+
+
+
+var max = new Gladiator("Maximuss","Spear")
+var titus = new Gladiator("Titus","Trident")
+var colosseum = new Arena("Colosseum")
+colosseum.addGladiator(max)
+colosseum.addGladiator(titus)
+colosseum.fight()
+console.log(colosseum.gladiators) // => [max]
