@@ -31,36 +31,45 @@ class Arena {
 
     if (this.gladiators[0].weapon === 'spear') {
       if (this.gladiators[1].weapon === 'trident') {
+        console.log(`${this.gladiators[0].name} has been eliminated from the ${this.name}`)
         this.gladiators.shift()
       }
       else if (this.gladiators[1].weapon === 'club') {
+        console.log(`${this.gladiators[1].name} has been eliminated from the ${this.name}`)
         this.gladiators.pop()
       }
       else if (this.gladiators[1].weapon === 'spear') {
+        console.log(`Both Gladiators have been eliminated from the ${this.name}`)
         this.gladiators.pop()
         this.gladiators.pop()
       }
     }
     else if (this.gladiators[0].weapon === 'trident') {
       if (this.gladiators[1].weapon === 'club') {
+        console.log(`${this.gladiators[0].name} has been eliminated from the ${this.name}`)
         this.gladiators.shift()
       }
       else if (this.gladiators[1].weapon === 'spear') {
+        console.log(`${this.gladiators[1].name} has been eliminated from the ${this.name}`)
         this.gladiators.pop()
       }
       else if (this.gladiators[1].weapon === 'trident') {
+        console.log(`Both Gladiators have been eliminated from the ${this.name}`)
         this.gladiators.pop()
         this.gladiators.pop()
       }
     }
     else if (this.gladiators[0].weapon === 'club') {
       if (this.gladiators[1].weapon === 'spear') {
+        console.log(`${this.gladiators[0].name} has been eliminated from the ${this.name}`)
         this.gladiators.shift()
       }
       else if (this.gladiators[1].weapon === 'trident') {
+        console.log(`${this.gladiators[1].name} has been eliminated from the ${this.name}`)
         this.gladiators.pop()
       }
       else if (this.gladiators[1].weapon === 'club') {
+        console.log(`Both Gladiators have been eliminated from the ${this.name}`)
         this.gladiators.pop()
         this.gladiators.pop()
       }
