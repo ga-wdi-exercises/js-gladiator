@@ -2,7 +2,7 @@ class Arena extends Gladiator {
     constructor (namep , gladiatorName, gladiatorWeapon) {
       super(gladiatorName, gladiatorWeapon);
 
-      this.name= namep.charAt(0).toUppperCase() + namep.slice(1);
+      this.name = namep.charAt(0).toUppperCase() + namep.slice(1);
       this.gladiators = [];
       this.entertain = false;
     }
